@@ -36,7 +36,8 @@
                     </div></center>
                     <div class="card card-body">
                     <?php
-                    $query = "SELECT * FROM producto";
+                    $id = $_REQUEST['id'];
+                    $query = "SELECT * FROM producto WHERE id=$id";
                     $result = mysqli_query($conn, $query);
                     $row = mysqli_fetch_array($result) ?>
                         <form action="editar_producto.php?id=<?php echo $_GET['id'] ?>" method="POST" enctype="multipart/form-data">

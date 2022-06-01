@@ -13,30 +13,24 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Productos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div>
-                <a class="btn btn-outline-success" href="iniciar_sesion.php">Iniciar Sesión</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Nav -->
+    <?php include("nav.php"); ?>
+    
     <?php if (isset($_SESSION['usuario'])) { ?>
         <div class="container p-4">
             <div class="row">
                 <div class="col-md-4">
-                    <center><div>
-                        <p>Editar Producto</p>
-                    </div></center>
+                    <center>
+                        <div>
+                            <p>Editar Producto</p>
+                        </div>
+                    </center>
                     <div class="card card-body">
-                    <?php
-                    $id = $_REQUEST['id'];
-                    $query = "SELECT * FROM producto WHERE id=$id";
-                    $result = mysqli_query($conn, $query);
-                    $row = mysqli_fetch_array($result) ?>
+                        <?php
+                        $id = $_REQUEST['id'];
+                        $query = "SELECT * FROM producto WHERE id=$id";
+                        $result = mysqli_query($conn, $query);
+                        $row = mysqli_fetch_array($result) ?>
                         <form action="editar_producto.php?id=<?php echo $_GET['id'] ?>" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>

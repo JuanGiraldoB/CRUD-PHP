@@ -13,14 +13,6 @@ if(isset($_POST['save'])){
 
     $result = mysqli_query($conn, $query);
 
-    // if(!$result){
-    //     $_SESSION['mensaje'] = 'No se pudo guardar';
-    //     $_SESSION['tipo_mensaje'] = 'danger';    
-    // }else{
-    //     $_SESSION['mensaje'] = 'Usuario guardado';
-    //     $_SESSION['tipo_mensaje'] = 'success';    
-    // }
-
     header("Location: index.php");
 
 }

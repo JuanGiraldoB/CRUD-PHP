@@ -24,9 +24,6 @@
                 <a class="btn btn-outline-success" href="iniciar_sesion.php">Iniciar Sesión</a>
             </div>
         </div>
-        <div>
-            <a class="btn btn-outline-success" href="registro.php">Registrarse</a>
-        </div>
     </nav>
 
     <!-- Agregar productos -->

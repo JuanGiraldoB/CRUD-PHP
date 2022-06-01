@@ -40,6 +40,7 @@
                         </div>
                         <input type="submit" class="btn btn-success btn-block" name="save" value="Iniciar"></input>
                     </form>
+                    <p class="small fw-bold mt-2 pt-1 mb-0">No tiene una cuenta? <a href="registro.php" class="link-danger">Registrarse</a></p>
                 </div>
             </div>
         </div>

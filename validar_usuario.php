@@ -23,13 +23,6 @@ if (isset($_POST['save'])) {
         $_SESSION['tipo_mensaje'] = 'success';  
     }
 
-    // echo $_SESSION['usuario'];
-
-    // while ($row = mysqli_fetch_array($result)) {
-    //     echo $row['nombre'] . "<br>";
-    //     echo $row['contrasena'] . "<br>";
-    // }
-
     header("Location: index.php");
 
 }

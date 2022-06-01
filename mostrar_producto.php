@@ -20,7 +20,11 @@
                     <td><?php echo $row['id'] ?></td>
                     <td><?php echo $row['nombre'] ?></td>
                     <td><?php echo $row['precio_venta'] ?></td>
-                    <td><img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>" /></td>
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                            <img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>" class="card-img-top" alt="...">
+                        </div>
+                    </td>
                     <?php if (isset($_SESSION['usuario'])) { ?>
                         <td>
                             <a href="editar_producto_vista.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">

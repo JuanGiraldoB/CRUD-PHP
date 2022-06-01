@@ -23,14 +23,15 @@
             <div class="container p-4">
                 <div class="row">
                     <div class="col-md-4">
+                        <?php if (isset($_SESSION['mensaje'])) { ?>
+                            <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
+                                <?php echo $_SESSION['mensaje']; ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php
+                        } ?>
                         <div class="card card-body">
-                            <?php if (isset($_SESSION['mensaje'])) { ?>
-                                <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
-                                    <?php echo $_SESSION['mensaje']; ?>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" arial-label="Close"></button>
-                                </div>
-                            <?php
-                            } ?>
+
                             <?php include("formulario_producto.php"); ?>
                         </div>
                     </div>
@@ -38,9 +39,10 @@
                 </div>
             </div>
         <?php
-        } else { 
-            include("mostrar_producto.php"); 
-        }?>
+        } else {
+            include("mostrar_producto.php");
+        } ?>
+    </div>
 </body>
 
 </html>
